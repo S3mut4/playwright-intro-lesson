@@ -3,13 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "prettier:format": "prettier --write \"tests/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "prettier:check": "prettier --check \"tests/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "lint": "eslint tests",
+    "test": "npx playwright test"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.64.1",
-    "@types/node": "^26.6.5"
+    "@types/node": "^26.6.5",
+    "prettier": "^3.9.10"
   }
 }
